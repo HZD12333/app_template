@@ -1,0 +1,94 @@
+.wrapper {
+    font-size: 28px;
+
+    .main {
+        width: 702px;
+        margin: 24px auto;
+        background: #FFFFFF;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .address-section {
+        position: relative;
+        padding: 34px 28px;
+        line-height: 40px;
+        background: #FFFFFF;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 28px;
+            width: calc(100% - 56px);
+            height: 1px;
+            background-color: #E5E9F3;
+        }
+
+        .label {
+            flex-shrink: 0;
+            width: 154px;
+            .PingFangSC-Medium();
+        }
+
+        .region,
+        .input {
+            flex: 1;
+        }
+
+        .input {
+            font-family: PingFangSC-Regular;
+            font-weight: 400;
+            font-size: 28px;
+            overflow: hidden;
+
+            &::-webkit-input-placeholder {
+                color: #D3D7DF;
+                font-size: 28px;
+            }
+        }
+
+        .picker {
+            flex: 1;
+            position: relative;
+            font-size: 28px;
+
+            .arrow {
+                width: 20px;
+                height: 20px;
+                margin: 1px 3px 0 6px;
+                background: url('https://img.gzzhitu.com/zhitu-api/1731928442347.png') no-repeat right;
+                background-size: 13px 20px;
+            }
+
+            .placeholder,
+            .selected {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .placeholder {
+                font-size: 26px;
+                color: #D3D7DF;
+
+                .text {
+                    color: #6A6A70;
+                }
+            }
+        }
+    }
+
+    .default {
+        margin: 36px 0 36px 28px;
+    }
+
+    :global {
+        .my-button {
+            height: 84px;
+            margin: 0 auto;
+            line-height: 84px;
+            border-radius: 42px;
+        }
+    }
+}

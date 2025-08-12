@@ -1,0 +1,125 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "project": "tsconfig.json",
+        "sourceType": "module",
+        "warnOnUnsupportedTypeScriptVersion": true,
+        "createDefaultProgram": false,
+        "ecmaFeatures": {
+            "globalReturn": false
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript"
+    ],
+    "plugins": [
+        "import",
+        "react",
+        "react-hooks",
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "ignorePatterns": ["**/dist/**", "**/node_modules/**", "**/lib/**"],
+    "rules": {
+        "import/order": [
+            "error",
+            {
+                // 对导入模块进行分组
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index",
+                    "object",
+                    "type",
+                    "unknown"
+                ],
+                // 通过路径自定义分组
+                "pathGroups": [
+                    {
+                        // pattern：当前组中模块的最短路径匹配
+                        "pattern": "@miyuan/**",
+                        // 在规定的组中选其一，index、sibling、parent、internal、external、builtin、object、type、unknown
+                        "group": "internal",
+                        // 定义组的位置，after、before
+                        "position": "before"
+                    },
+                    {
+                        "pattern": "@shares/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": "@/**",
+                        "group": "internal",
+                        "position": "after"
+                    },
+                    {
+                        "pattern": ".less",
+                        "group": "unknown",
+                        "position": "after"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": ["builtin", "internal"],
+                // newlines-between 不同组之间是否进行换行
+                "newlines-between": "always",
+                // alphabetize 根据字母顺序对每个组内的顺序进行排序
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ],
+        "import/no-unresolved": "off",
+        "import/no-named-as-default-member": "off",
+        "import/no-named-as-default": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "semi": true,
+                "trailingComma":  "all",
+                "singleQuote":  true,
+                "jsxSingleQuote":  true,
+                "printWidth":  110,
+                "tabWidth":  4,
+                "bracketSpacing": true,
+                "htmlWhitespaceSensitivity": "ignore"
+            }
+        ],
+        "no-empty": "off",
+        "no-unused-vars": "off",
+        "prefer-const": "off",
+        "prefer-rest-params": "off",
+        "no-case-declarations": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error", {
+                "ignoreRestSiblings": true,
+                "destructuredArrayIgnorePattern": "^_",
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": true,
+            "node": true
+        }
+    }
+}

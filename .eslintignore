@@ -1,0 +1,13 @@
+.eslintrc.js
+node_modules
+dist
+scripts
+.DS_Store
+*.local
+*.d.ts
+vite.config.ts
+vitest.config.ts
+vitest.workspace.ts
+vitest.setup.ts
+__tests__
+taro

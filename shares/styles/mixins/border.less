@@ -1,0 +1,59 @@
+.border-common {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        transform: scale(.5);
+        transform-origin: left top;
+        pointer-events: none;
+    }
+}
+
+/**
+* 移动端1px边框
+* @param @radiusValue 圆角度 设置值需要*2
+* @param @borderColor 边框颜色
+*/
+.border-one-px(
+@radiusValue,
+@borderColor,
+@type: solid,
+@borderValue: 1PX
+) {
+    .border-common();
+
+    &::after {
+        border: @borderValue @type @borderColor;
+        border-radius: @radiusValue;
+    }
+}
+
+.border-top-one-px(@borderColor, @type: solid) {
+    .border-common();
+
+    &::after {
+        border-top: 1PX @type @borderColor;
+    }
+}
+
+.border-bottom-one-px(@borderColor, @type: solid) {
+    .border-common();
+
+    &::after {
+        border-bottom: 1PX @type @borderColor;
+    }
+}
+
+.border-right-one-px(@borderColor, @type: solid) {
+    .border-common();
+
+    &::after {
+        border-right: 1PX @type @borderColor;
+    }
+}

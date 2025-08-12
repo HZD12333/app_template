@@ -1,0 +1,54 @@
+.tabs {
+    display: block;
+}
+
+.tabBar {
+    display: flex;
+    overflow: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #E5E9F3;
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0 !important;
+        height: 0 !important;
+        -webkit-appearance: none;
+        background: transparent;
+    }
+    &.no-underline {
+        border-bottom: none;
+    }
+
+    .tabItem {
+        flex-shrink: 0;
+        padding: 24px 35px;
+        color: #b1b1b5;
+        font-size: 28px;
+        font-family: PingFangSC-Regular;
+    }
+
+    :global {
+        .active {
+            color: #3D3D47;
+            font-family: PingFangSC-Semibold !important;
+        }
+    }
+
+    &.centered {
+        justify-content: center;
+    }
+
+    .indicator {
+        height: 6px;
+        background: #5264E0;
+        position: absolute;
+        bottom: 0;
+        transition: left .3s;
+    }
+}
+
+.content {
+    padding: 30px 35px;
+}

@@ -1,0 +1,110 @@
+.mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.modal {
+    height: 914px;
+    background: #F5F7F9;
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 36px 24px 36px 48px;
+
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    font-size: 32px;
+    color: #3D3D47;
+    height: 124px;
+    box-sizing: border-box;
+}
+
+.close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 64px;
+    height: 64px;
+    background: url('https://img.gzzhitu.com/zhitu-api/1746701936255.png') no-repeat;
+    background-size: contain;
+}
+
+.body {
+    flex: 1 1 0;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0 24px;
+    border-radius: 24px;
+    
+}
+
+.itemlist{
+    margin-top: 36px;
+    border-radius: 24px;
+    background: #fff;
+}
+
+.item {
+    padding: 36px 24px 36px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f5f5f5;
+    width: 702px;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+
+
+    &-type {
+        .PingFangSC-Medium();
+        font-size: 28px;
+        color: #3D3D47;
+    }
+
+    &-desc {
+        margin-top: 12px;
+        color: #3D3D47;
+    }
+
+
+    &-detailBtn {
+        width: 88px;
+        height: 54px;
+        background: linear-gradient(156deg, #FFD800 0%, #FFCB03 100%);
+        border-radius: 27px;
+        .PingFangSC-Semibold();
+        font-size: 24px;
+        color: #3D3D47;
+        line-height: 54px;
+        text-align: center;
+        position: relative;
+        bottom: 9px;
+
+    }
+
+}

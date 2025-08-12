@@ -1,0 +1,56 @@
+.wrapper {
+    min-height: 100vh;
+    background-color: #FF7F2C;
+    padding-bottom: 68px;
+
+    .right {
+        display: flex;
+        align-items: center;
+        margin-right: 18px;
+        font-size: 28px;
+    }
+
+    .banner {
+        position: relative;
+        width: 750px;
+        height: 380px;
+
+        .rule {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            width: 91px;
+            height: 48px;
+            .backgroundImage('https://img.gzzhitu.com/zhitu-api/1747985786863.png');
+        }
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0;
+        z-index: @zIndex-9;
+        padding: 12px 24px;
+        background-color: #FF7F2C;
+    }
+
+    :global {
+        .my-scroll-list {
+            padding: 12px 24px 0;
+
+            .over::after,.over::before {
+                background: #fff;
+            }
+        }
+
+        .my-no-data {
+            margin-top: 149px;
+        }
+    }
+
+    .noDataTip {
+        margin-top: 12px;
+        font-size: @font-size-s;
+        font-family: PingFangSC-Regular;
+        line-height: 33px;
+    }
+}

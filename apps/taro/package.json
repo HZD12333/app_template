@@ -1,0 +1,10 @@
+{
+  "name": "@tarojs/taro",
+  "version": "3.6.8",
+  "description": "兼容处理",
+  "main": "index.js",
+  "scripts": {},
+  "engines": {
+    "node": ">=14"
+  }
+}

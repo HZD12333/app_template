@@ -1,0 +1,45 @@
+.wrapper {
+    position: relative;
+
+        .popover-mask {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 98;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .popover-content {
+            position: absolute;
+            top: calc(100% + 20px);
+            right: 12px;
+            z-index: 99;
+            min-width: 82px;
+            background: #fff;
+            border-radius: 18px;
+            animation: fadeIn 200ms linear;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -11px;
+                right: 20px;
+                width: 24px;
+                height: 12px;
+                background: url('https://img.gzzhitu.com/zhitu-api/1722492518449.png') no-repeat;
+                background-size: contain;
+            }
+        }
+
+    @keyframes fadeIn {
+        0% {
+            transform: scale(.7) translateY(30px);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+    };
+}

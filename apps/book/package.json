@@ -1,0 +1,25 @@
+{
+  "name": "book",
+  "version": "0.1.0",
+  "description": "自营图书",
+  "main": "src/app",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "uat01": "vite --mode uat01",
+    "uat02": "vite --mode uat02",
+    "prod": "vite --mode prod",
+    "move:html": "node ../../scripts/move-html.js book",
+    "build:uat01": "vite build --mode uat01 && pnpm move:html",
+    "build:uat02": "vite build --mode uat02 && pnpm move:html",
+    "build:gray": "vite build --mode gray && pnpm move:html",
+    "build:prod": "vite build --mode prod && pnpm move:html",
+    "tsc": "tsc",
+    "preview": "vite preview --port 8080"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10"
+  }
+}

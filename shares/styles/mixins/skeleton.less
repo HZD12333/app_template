@@ -1,0 +1,19 @@
+@bg-color: #EAEFF2;
+@bg-color-2: #e0e4e7;
+@deg: 90deg;
+
+.placeholder() {
+    background: linear-gradient(@deg, @bg-color-2, @bg-color, @bg-color-2);
+    animation: skeletonLoading 2s infinite;
+}
+
+.skeleton-loading() {
+    @keyframes skeletonLoading {
+        50% {
+            background: linear-gradient(@deg, @bg-color-2, @bg-color-2, @bg-color);
+        }
+        100% {
+            background: linear-gradient(@deg, @bg-color, @bg-color-2, @bg-color-2,);
+        }
+    }
+}

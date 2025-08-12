@@ -1,0 +1,113 @@
+.my-product-card {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 18px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #FFF;
+    overflow: hidden;
+
+    .left {
+        flex-shrink: 0;
+        position: relative;
+        margin-right: 18px;
+    }
+
+    .right {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .title {
+        margin-bottom: 8px;
+        font-size: 28px;
+        line-height: 38px;
+        color: @font-color-1;
+        .ellipsis(2);
+
+        .icon {
+            display: inline-block;
+            width: 52px;
+            height: 29px;
+            margin: 0 16px 7px 0;
+            vertical-align: middle;
+            .backgroundImage('https://img.gzzhitu.com/zhitu-api/1747980466363.png');
+        }
+    }
+
+    .price-area {
+        position: relative;
+        font-size: 22px;
+        line-height: 30px;
+        color: #D52800;
+        .PingFangSC-Medium();
+
+        .group {
+            margin-right: 6px;
+        }
+
+        .origin {
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            font-size: 22px;
+            line-height: 30px;
+            color: #A9ADB6;
+        }
+    }
+
+    .operation {
+        display: flex;
+        justify-content: flex-end;
+
+        .btn {
+            height: 52px;
+            padding: 0 26px;
+            font-size: 24px;
+            line-height: 53px;
+            .PingFangSC-Medium();
+            color: #FFF;
+            background: linear-gradient( 90deg, #FF3F7E 0%, #FF2B32 100%), #E60B0B;;
+            border-radius: 29px;
+
+            &.promotion {
+                color: @font-color-1;
+                background: #FFD800;
+            }
+
+            .money {
+                position: relative;
+                top: -3px;
+                margin-left: 3px;
+                font-family: MiSans-Medium;
+                font-size: 30px;
+                color: #FFF700;
+                vertical-align: middle;
+            }
+        }
+
+        .btn+.btn {
+            margin-left: 15px;
+        }
+    }
+}
+
+@tag-height: 30px;
+
+.my-product-tag {
+    display: flex;
+    flex-wrap: wrap;
+
+    .tag {
+        height: @tag-height;
+        margin: 0 8px 8px 0;
+        padding: 0 8px;
+        font-size: 20px;
+        color: #FF5129;
+        line-height: 32px;
+        .border-one-px(4px, #FF5129);
+    }
+}

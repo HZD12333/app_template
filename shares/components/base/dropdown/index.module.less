@@ -1,0 +1,56 @@
+.wrapper {
+    box-sizing: border-box;
+    min-width: 182px;
+    padding: 0 24px;
+    overflow: hidden;
+    animation: slideIn 333ms linear;
+    // box-shadow: 0 0.2vw 1.7vw 0 rgba(0,0,0,0.14);
+
+    @keyframes slideIn {
+        0% {
+            max-height: 0;
+        }
+        100% {
+            max-height: 700px;
+        }
+    }
+    @keyframes slideOut {
+        0% {
+            max-height: 700px;
+        }
+        100% {
+            max-height: 0;
+        }
+    }
+
+    .no-data {
+        height: 120px;
+        text-align: center;
+        line-height: 120px;
+    }
+
+    .item {
+        position: relative;
+        padding: 28px 18px 28px 8px;
+        font-size: 26px;
+        line-height: 37px;
+
+        .icon {
+            position: absolute;
+            top: 34px;
+            right: -8px;
+            width: 24px;
+            height: 24px;
+            background: url('https://img.gzzhitu.com/zhitu-api/1722496192446.png') no-repeat;
+            background-size: contain;
+        };
+    }
+
+    .item + .item {
+        .border-top-one-px(#E5E9F3);
+    }
+}
+
+.popover {
+    animation: none !important;
+}

@@ -1,0 +1,149 @@
+// 苹方-简 常规体
+@font-face {
+    font-family: PingFangSC-Regular;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/PingFangRegular.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/PingFangRegular.woff') format('woff');
+    font-display: swap;
+}
+// 苹方-简 中黑体
+@font-face {
+    font-family: PingFangSC-Medium;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/PingFangMedium.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/PingFangMedium.woff') format('woff'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/PingFangRegular.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/PingFangRegular.woff') format('woff');
+    font-display: swap;
+}
+// 苹方-简 粗体
+@font-face {
+    font-family: PingFangSC-Semibold;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/PingFangSemibold.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/PingFangSemibold.woff') format('woff');
+    font-display: swap;
+}
+
+// MiSans-Regular
+@font-face {
+    font-family: MiSans-Regular;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Regular-onlynumber.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Regular-onlynumber.woff') format('woff');
+    font-display: swap;
+}
+
+// MiSans-Medium
+@font-face {
+    font-family: MiSans-Medium;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Medium-onlynumber.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Medium-onlynumber.woff') format('woff');
+}
+// MiSans-Bold
+@font-face {
+    font-family: MiSans-Bold;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Bold-onlynumber.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/MiSans-Bold-onlynumber.woff') format('woff');
+}
+
+// DIN-Medium
+@font-face {
+    font-family: DIN-Medium;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/DINMIYUAN-Medium.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/DINMIYUAN-Medium.woff') format('woff');
+    font-display: swap;
+}
+
+// DIN-Bold
+@font-face {
+    font-family: DIN-Bold;
+    src: url('https://img.gzzhitu.com/font/202402221708585658389/DINMIYUAN-Bold.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202402221708585658389/DINMIYUAN-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+// 阿里巴巴普惠体-R
+@font-face {
+    font-family: AlibabaPuHuiTiR;
+    src: url('https://img.gzzhitu.com/font/202405141715667159504/AlibabaPuHuiTiR.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202405141715667159504/AlibabaPuHuiTiR.woff') format('woff');
+    font-display: swap;
+}
+
+// 鸿蒙 中体
+@font-face {
+    font-family: HarmonyOS_Sans_Medium;
+    src: url('https://img.gzzhitu.com/font/202405141715667159504/HarmonyOS_Sans_Medium.woff2') format('woff2'),
+        url('https://img.gzzhitu.com/font/202405141715667159504/HarmonyOS_Sans_Medium.woff') format('woff');
+    font-display: swap;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify_sb {
+    justify-content: space-between;
+}
+
+.justify_c {
+    justify-content: center;
+}
+
+.align_c {
+    align-items: center;
+}
+
+.ellipsis {
+    .ellipsis();
+}
+
+.text_l {
+    text-align: left;
+}
+
+.text_r {
+    text-align: right;
+}
+
+.text_c {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.common-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: @zIndex-99;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+}
+
+html,body {
+    width: 100%;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-size: @font-size-s;
+    font-weight: 400;
+    color: @font-color-1;
+    height: 100vh;
+    // overflow: hidden;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100vh;
+    background: #F5F7F9;
+    overflow-y: scroll;
+}

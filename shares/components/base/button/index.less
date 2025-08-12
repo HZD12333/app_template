@@ -1,0 +1,66 @@
+@height: 78px;
+
+.my-button {
+    display: inline-block;
+    box-sizing: border-box;
+    height: @height;
+    font-size: 30px;
+    .PingFangSC-Medium();
+    text-align: center;
+    line-height: @height;
+    color: @font-color-1;
+    border-radius: 39px;
+    border: 0;
+
+    &.t-default {
+        background: #FFF;
+        .border-one-px(98px, #84848A);
+    }
+
+    &.t-primary {
+        color: @font-color-1;
+        background: linear-gradient( 156deg, #FFD800 0%, #FFCB03 100%);
+    }
+
+    &.t-second {
+        background: #fff;
+    }
+
+    &.s-mini {
+        height: 56px;
+        font-size: @font-size-s;
+        line-height: 56px;
+        font-family: PingFangSC-Regular, PingFang SC;
+    }
+
+    &.disabled {
+        color: #ddd;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.my-button-group {
+    display: flex;
+
+    .my-button {
+        &:first-child {
+            border-radius: 49px 0 0 49px;
+
+            &::after {
+                border-radius: 98px 0 0 98px;
+            }
+        }
+
+        &:last-child {
+            border-radius: 0 49px 49px 0;
+
+            &::after {
+                border-radius: 0 98px 98px 0;
+            }
+        }
+    }
+}
+

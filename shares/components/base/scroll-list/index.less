@@ -1,0 +1,49 @@
+@text-color: #A9ADB6;
+
+.my-scroll-list {
+    .status {
+        .alignCenter();
+        padding: 32px 0 48px;
+        font-size: 26px;
+        color: @text-color;
+
+        .loading {
+            height: 36px;
+            width: 36px;
+            margin-right: 10px;
+            .backgroundImage('https://img.gzzhitu.com/zhitu-api/1747908533490509.png');
+            animation: roller 1.5s infinite linear;
+        }
+
+        .over {
+            position: relative;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                top: 18px;
+                width: 92px;
+                height: 1px;
+                background: @text-color;
+            }
+
+            &::before {
+                left: -121px;
+            }
+
+            &::after {
+                right: -121px;
+            }
+        }
+
+        @keyframes roller {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    }
+}

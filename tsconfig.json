@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "dist",
+      "sourceMap": true,
+      "target": "ES5",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "newLine": "LF",
+      "strict": true,
+      "downlevelIteration": true,
+      "allowJs": true,
+      "noImplicitAny": false,
+      "noImplicitThis": false,
+      "noUnusedLocals": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "removeComments": false,
+      "jsx": "react-jsx",
+      "lib": ["esnext", "dom"],
+      "paths": {
+        "@shares/*": ["shares/*"],
+        "zod/v4": ["./node_modules/zod/dist/types/v4"]
+      }
+  },
+  "exclude": [
+    "**/dist/**/*",
+    "**/node_modules/**/*",
+    "scripts"
+  ],
+  "include": ["apps/**/src", "types", "shares", "**/_config.ts", "**/_env.ts", "apps/book/src/services"],
+}

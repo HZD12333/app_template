@@ -1,0 +1,26 @@
+/**
+* 内容居中
+*/
+.alignCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**
+* 两端对齐
+*/
+.alignBetween() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ellipsis(@row: 1) {
+    /* stylelint-disable-next-line value-no-vendor-prefix */
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: @row;
+    -webkit-box-orient: vertical;
+}

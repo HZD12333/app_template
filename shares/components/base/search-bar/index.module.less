@@ -1,0 +1,52 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 66px;
+    background: #FFFFFF;
+    border-radius: 33px;
+    .border-one-px(66px, #E5E9F3);
+    overflow: hidden;
+
+    .searchIcon {
+        width: 36px;
+        height: 36px;
+        margin: 0 8px 0 26px;
+        .backgroundImage('https://img.gzzhitu.com/zhitu-api/1747989040390.png')
+    }
+
+    .input {
+        flex: 1;
+        height: 100%;
+        font-size: 26px;
+        color: #3D3D47;
+        -webkit-appearance: none; /* 移除默认样式 */
+
+        &::-webkit-input-placeholder {
+            font-size: 26px;
+            color: #6A6A70;
+        }
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    .clearIcon {
+        width: 33px;
+        height: 33px;
+        margin-left: 8px;
+        .backgroundImage('https://img.gzzhitu.com/zhitu-api/1747992730031.png')
+    }
+
+    .searchBtn {
+        height: 54px;
+        margin: 6px 9px 6px 27px;
+        padding: 0 24px;
+        font-size: 28px;
+        color: #333333;
+        line-height: 55px;
+        background: #FFD800;
+        border-radius: 33px;
+    }
+}

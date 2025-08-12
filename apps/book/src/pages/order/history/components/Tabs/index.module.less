@@ -1,0 +1,41 @@
+.inner {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    
+    &::-webkit-scrollbar {
+        width: 0 !important;
+    }
+
+    .item {
+        margin-top: 20px;
+        flex-shrink:0;
+        box-sizing: border-box;
+        height: 42px;
+        font-size: 28px;
+        color: #3D3D47;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 26px;
+        text-align: center;
+
+        &.active {
+            font-size: 28px;
+            color: #333333;
+
+            .PingFangSC-Semibold();
+            height: 48px;
+            line-height: 48px;
+            background: #FFD800;
+            border-radius: 24px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "dist",
+      "paths": {
+          "@/*": ["src/*"],
+          "@shares/*": ["../../shares/*"],
+          "zod/v4": ["../../node_modules/zod/dist/types/v4"]
+      }
+  },
+  "include": ["./", "../../types",  "_config.ts", "src/services"],
+  "exclude": ["node_modules", "dist/**/*"],
+  "extends": "../../tsconfig.json"
+}
